@@ -1,0 +1,44 @@
+Q: Send 5 ETH to 0xafEC925C0324e301B357cC734ebC69977C0474F9.
+A: { "tool": "send_eth", "tool_input": { "receipent": "0xafEC925C0324e301B357cC734ebC69977C0474F9", "amount": "5" }, "message": "Sure, I'm sending 5 Ether to 0xafEC925C0324e301B357cC734ebC69977C0474F9. Please wait..." }
+
+Q: What is the Ethereum address for amine.eth?
+A: { "tool": "ens_domain", "tool_input": { "domain": "amine.eth" }, "message": "Let me find the Ethereum address associated with this ENS domain. Please wait..." }
+
+Q: Send 5 ETH to salma.eth.
+A: { "tool": "ens_domain", "tool_input": { "domain": "salma.eth" }, "message": "You want to send 5 to salma.eth. Let me find the Ethereum address associated with this ENS domain. Please wait..." }
+
+Q: Show me the transaction history for hamza.eth.
+A: { "tool": "ens_domain", "tool_input": { "domain": "hamza.eth" }, "message": "You want to see the transaction history for hamza.eth. Let me find the Ethereum address associated with this ENS domain. Please wait..." }
+
+Q: I want to know what functions are available in the smart contract deployed at 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984.
+A: { "tool": "ask_abi", "tool_input": { "contract_address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984", "question": "What functions are available in this contract?" }, "message": "Let me fetch the list of available functions in this contract for you..." }
+
+Q: What is the latest Ethereum price in USD.
+A: { "tool": "get_eth_price", "tool_input": {}, "message": "Sure, let me fetch the latest Ethereum price in USD for you..." }
+
+Q: How much time will it take for a transaction to be confirmed if I set the gas price to 213?
+A: { "tool": "estimate_confirmation_time", "tool_input": {"gasprice": "213"}, "message": "Let me calculate the estimated confirmation time for this transaction..." }
+
+Q: What is the current transaction fee (gas price) on the Ethereum network?
+A: { "tool": "get_gas_oracle", "tool_input": {}, "message": "I'm fetching the current gas prices for you. Please wait a moment..." }
+
+Q: What is my current Ethereum balance?
+A: { "tool": "get_eth_balance", "tool_input": {"address": "0x87e34a9b149518c288E3D008fb2717bd31f7e717"}, "message": "Sure, let me quickly fetch the balance of your Ethereum wallet..." }
+
+Q: Show me the transaction history for my wallet.
+A: { "tool": "get_latest_tx", "tool_input": {"address": "0x87e34a9b149518c288E3D008fb2717bd31f7e717"}, "message": "Okay, I'm pulling up your transaction history. Please wait..." }
+
+Q: Show me the transaction history for 0x690B9A9E9aa1C9dB991C7721a92d351Db4FaC990.
+A: { "tool": "get_latest_tx", "tool_input": {"address": "0x690B9A9E9aa1C9dB991C7721a92d351Db4FaC990"}, "message": "Okay, I'm pulling up your transaction history. Please wait..." }
+
+Q: What is the total supply of DAI token?
+A: { "tool": "get_verified_token_list", "tool_input": {}, "message": "To fetch the total supply of DAI, we first need its contract address. Let's confirm that DAI is a verified token and get its contract address from the list of verified tokens..." }
+
+Q: Show me the tokens in my wallet?
+A: { "tool": "get_erc20_token_balances", "tool_input": {"address": "0x87e34a9b149518c288E3D008fb2717bd31f7e717"}, "message": "Let me fetch the balances of your ERC20 tokens. Please wait a moment..." }
+
+Q: What is the total supply of token at contract address 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984?
+A: { "tool": "read_contract", "tool_input": { "contract_address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984", "function_name": "totalSupply", "args": [] }, "message": "Let me fetch the total supply of the token at the contract address you provided..." }
+
+Q: Transfer 8.081593556245886 tokens from contract 0xdAC17F958D2ee523a2206206994597C13D831ec7 (with 8 decimal places) to 0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5.
+A: { "tool": "write_contract", "tool_input": { "contract_address": "0xdAC17F958D2ee523a2206206994597C13D831ec7", "function_name": "transfer", "args": [ "0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5", "808159355" ] }, "message": "Initiating a transfer of 8.081593556245886 tokens from the specified contract address to the specified receipent's address. Please wait..." }
